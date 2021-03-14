@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Note } from './interfaces/note.interface';
+import { Note } from './entity/note.entity';
 import { CreateNoteDto } from './dto/create-note.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { UpdateNoteDto } from './dto/update-note.dto';

@@ -1,11 +1,15 @@
 import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateNoteDto {
   @IsString()
   @IsOptional()
-  title: string;
+  @ApiProperty({
+    required: false
+  })  title: string;
 
   @IsString()
   @IsNotEmpty()
+  @ApiProperty()
   content: string;
 }
